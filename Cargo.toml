@@ -1,0 +1,8 @@
+[package]
+name = "rtl_rs"
+version = "0.1.0"
+
+[dependencies]
+clap = "2.32.0"
+getopts = "0.2"
+rtlsdr_mt = "2.0.0"
