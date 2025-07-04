@@ -14,7 +14,7 @@ All arguments follow RTLSDR [conventions](https://osmocom.org/projects/rtl-sdr/w
 
 The helper script rtl_devices.sh adds args needed to map USB to the container
 
-The DSP command line program [demod](https://github.com/cubehub/demod) is installed into the container
+The command line program [demod](https://github.com/cubehub/demod) is installed into the container
 ```
 docker run $(./rtl_devices.sh) --rm -i --entrypoint /bin/bash rtl_rs -c "rtl_rs -d 0 -s 230400 -f 94100000 | \
   demod --samplerate 230400 --intype i16 --outtype i16 --bandwidth 100000 fm --deviation 75000" | \
@@ -22,7 +22,7 @@ docker run $(./rtl_devices.sh) --rm -i --entrypoint /bin/bash rtl_rs -c "rtl_rs 
 ```
 
 ## Usage
-Example shows tune to 94.1 FM and play audio and then tune to 95.5 FM and continue to play without exit
+Example shows tune to 94.1 FM and play audio and then tune to 92.3 FM and continue to play without exit
 ```
 rtl_rs -d 0 -s 230400 -f 94100000 | \
   demod --samplerate 230400 --intype i16 --outtype i16 --bandwidth 100000 fm --deviation 75000 | \
