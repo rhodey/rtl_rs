@@ -27,9 +27,6 @@ Example shows tune to 94.1 FM and play audio and then tune to 92.3 FM and contin
 rtl_rs -d 0 -s 230400 -f 94100000 | \
   demod --samplerate 230400 --intype i16 --outtype i16 --bandwidth 100000 fm --deviation 75000 | \
     play -t raw -r 230400 -e signed-integer -b16 -c 1 -V1 -
-stdin> -g 62, -p 18
-stderr> ok: -g 62
-stderr> ok: -p 18
 stdin> -f 92300000
 stderr> ok: -f 92300000
 ```
